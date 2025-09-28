@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html> 
-	<head>
-		<link href="styles.css" rel="stylesheet">
-		<title>Главная - Лучшие мессенджеры</title>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="Web.html">Главная</a></li>
-					<li><a href="history.html">История</a></li>
-					<li><a href="compare.html">Сравнение</a></li>
-					<li><a href="future.html">Будущее</a></li>
-				</ul>
-			</nav>
-		</header>
+<head>
+    <link href="myStyle.css" rel="stylesheet">
+    <title>Главная - Лучшие мессенджеры</title>
+    <script src="WebJS.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="main-menu">
+                <li><a href="Web.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="compare.html">Сравнение</a></li>
+                <li><a href="future.html">Будущее</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">Темная тема</button>
+    </header>
 
-		<div class="common">
-			<h1 id="main-header">Лучшие мессенджеры мира</h1>
-			
-			<div>
-				<img class="messenger-logo" src="https://dl.memuplay.com/new_market/img/ru.ok.android.icon.2024-12-29-17-23-34.png" width="150" height="150" alt="Логотип Одноклассников"/>
-				<img class="messenger-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Max_logo_2025.png" width="150" height="150" alt="Логотип Max"/>
-				
-				<p>
-					Хочу поделиться своими эмоциями и выразить огромную благодарность платформам, которые стали для меня не просто сайтом и приложением, а настоящим мостом в мир теплого общения — социальной сети «Одноклассники» и мессенджеру Max!
-					<br><br>
-					Одноклассники — это гораздо больше, чем просто соцсеть. Это уютное цифровое пространство, где живут мои самые дорогие воспоминания и настоящие друзья.
-				</p>
+    <div class="common">
+        <h1 id="main-header">Лучшие мессенджеры мира</h1>
+        
+        <div class="slider">
+            <div class="slides">
+                <img src="https://dl.memuplay.com/new_market/img/ru.ok.android.icon.2024-12-29-17-23-34.png" class="slide active">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Max_logo_2025.png" class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/800px-Telegram_2019_Logo.svg.png" class="slide">
+            </div>
+            <button class="slider-btn prev">←</button>
+            <button class="slider-btn next">→</button>
+        </div>
+        
+        <p>Хочу поделиться своими эмоциями и выразить огромную благодарность платформам, которые стали для меня не просто сайтом и приложением, а настоящим мостом в мир теплого общения — социальной сети «Одноклассники» и мессенджеру Max!</p>
 
-				<blockquote>
-					"Одноклассники и Max - это не просто платформы, это часть моей повседневной жизни."
-				</blockquote>
+        <blockquote>"Одноклассники и Max - это не просто платформы, это часть моей повседневной жизни."</blockquote>
 
-				<button class="download-button" onclick="window.open('https://ok.ru')">Перейти в Одноклассники</button>
-				<button class="download-button" onclick="window.open('https://max.ru')">Скачать Max</button>
+        <button class="download-button" onclick="window.open('https://ok.ru')">Перейти в Одноклассники</button>
+        <button class="download-button" onclick="window.open('https://max.ru')">Скачать Max</button>
 
-			</div>
-		</div>
+        <div class="countdown">
+            <h3>До следующей пары:</h3>
+            <div id="timer">00:00:00</div>
+        </div>
 
-		<footer>
-			<p> Спасибо, что пользуетесь сайтом.</p>
-		</footer>
-	</body>
+        <div class="news-section">
+            <h3>Новости мессенджеров</h3>
+            <div id="news-container"></div>
+            <button id="load-news">Загрузить еще новости</button>
+        </div>
+
+        <div class="contact-form">
+            <h3>Обратная связь</h3>
+            <form id="feedback-form">
+                <input type="text" id="name" placeholder="Ваше имя">
+                <span id="name-error" class="error"></span>
+                
+                <input type="email" id="email" placeholder="Ваш email">
+                <span id="email-error" class="error"></span>
+                
+                <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                <span id="message-error" class="error"></span>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Спасибо, что пользуетесь сайтом.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
-
-<!--новые теги - <blockquote> <button>-->

@@ -5,7 +5,7 @@
 .common {
     width: 80%;
     margin: 20px auto;
-    background-color: gray;
+    background-color: lightgray;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px;
@@ -15,4 +15,86 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
+    color: black;
+}
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: white;
+}
+.dark-theme .common {
+    background-color: #333;
+}
+.slider {
+    position: relative;
+    max-width: 300px;
+    margin: 20px auto;
+}
+.slide {
+    display: none;
+    width: 100%;
+}
+.slide.active {
+    display: block;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.countdown {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+.dark-theme .countdown {
+    background: #444;
+}
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: #006400;
+}
+.news-item {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #006400;
+}
+.dark-theme .news-item {
+    background: #444;
+}
+.contact-form {
+    margin-top: 30px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 5px 10px;
+    background: #006400;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
